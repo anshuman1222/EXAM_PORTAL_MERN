@@ -2,7 +2,7 @@ const express = require('express')
 const session = require('express-session');
 const cors = require('cors')
 const cookieParser = require('cookie-parser')
-// const { db } = require('./db/db')
+const { db } = require('./db/db')
 const { readdirSync } = require('fs')
 const app = express()
 require('dotenv').config()
@@ -32,7 +32,7 @@ app.use(cookieParser())
 readdirSync('./routes').map((route) => app.use('/api', require('./routes/' + route)))
 
 const server = () => {
-    // db()
+    db()
     app.listen(PORT, () => {
         console.log(`You are listening to port : ${PORT}`)
     })
