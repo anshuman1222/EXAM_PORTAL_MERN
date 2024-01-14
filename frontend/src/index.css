@@ -1,0 +1,26 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap'); */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+::-webkit-scrollbar {
+    display: none;
+}
+
+@layer base {
+    body {
+        @apply font-[Poppins];
+        @apply min-h-screen;
+        @apply overflow-hidden
+       
+
+    }
+
+    li {
+        @apply px-4;
+        @apply cursor-pointer;
+        @apply font-semibold;
+    }
+}
+body{
+    background: linear-gradient(to bottom right , #1d0553 ,#4a0677, #c60fa2  );
+}
