@@ -100,7 +100,7 @@ const Register = () => {
 
     };
     return <>
-        <section className="bg-[#f0f4f8]">
+        <section className="bg-[#f0f4f8] font-semibold">
             <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
                 <section className="relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6">
                     <img
@@ -166,7 +166,7 @@ const Register = () => {
                         </p>
 
                         <form className="mb-0 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8" onSubmit={onSubmit} >
-                            <p className="text-center text-lg font-medium">  {values.isMember ? 'Log in to your account' : 'Sign in to your account'}</p>
+                            <p className="text-center text-lg font-bold">  {values.isMember ? 'Log in to your account' : 'Sign in to your account'}</p>
 
                             {!values.isMember && (<FormRow type='text' name={'First Name'} value={firstname} handleChange={handleInput('firstname')}></FormRow>)}
 
@@ -196,12 +196,12 @@ const Register = () => {
 
                             <button
                                 type="submit"
-                                className="block w-full rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white"
+                                className="block w-full rounded-lg bg-indigo-600 px-5 py-3 text-sm font-bold text-white"
                             >
                                 {values.isMember ? 'Log in' : 'Sign in'}
                             </button>
 
-                            <p className="text-center text-sm text-gray-500">
+                            <p className="text-center text-sm text-gray-500 font-semibold">
                                 {values.isMember ? 'Not a member yet?' : 'Already a member?'}
 
                                 <button type='button' onClick={toggleMember} className="underline">
