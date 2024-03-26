@@ -37,25 +37,23 @@ const Dashboard = () => {
     } = theme.useToken();
     return (
     
-        <Layout 
-            style={{
-            minHeight: '100vh',
-                background: "#4e0678"
-            }}
-            >
+        <Layout style={{ minHeight: '100vh'}} >
             <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)} style={{
-                background: "#4e0678"
+                background: "#4e0678",
             }} >
                 <div className="demo-logo-vertical" />
-                <Menu theme='dark' defaultSelectedKeys={['1']} mode="inline" items={items} style={{ background: "#4e0678"}} />
+                <Menu  defaultSelectedKeys={['1']} mode="inline" items={items} style={{ background: "#4e0678"}} />
             </Sider>
             <Layout>
                 <Header
                     style={{
-                    padding: 0,
+                    padding: 2,
                         background: colorBgContainer,
                     }}
-                />
+                    className='text-red-950 text-xl m-2 p-2'
+                >
+                Hey Shashwat!! Welcome Back
+                </Header>
                 <Content
                     style={{
                     margin: '0 16px',
